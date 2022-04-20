@@ -1,0 +1,8 @@
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\bin\Debug\CombineBinFilesTool.exe
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\bin\Debug\CombineBinFilesTool.pdb
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\obj\Debug\CombineBinFilesTool.csproj.AssemblyReference.cache
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\obj\Debug\CombineBinFilesTool.Properties.Resources.resources
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\obj\Debug\CombineBinFilesTool.csproj.GenerateResource.cache
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\obj\Debug\CombineBinFilesTool.csproj.CoreCompileInputs.cache
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\obj\Debug\CombineBinFilesTool.exe
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\obj\Debug\CombineBinFilesTool.pdb
