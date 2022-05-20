@@ -93,7 +93,7 @@ namespace CombineBinFilesTool
             if (CheckFile())
             {
                 //填充bin文件到指定大小
-                if (!FillFile(tBBootFolder.Text, long.Parse(BootFileSize.Text.Trim()) * 1024))
+                if (!FillFile(tBBootFolder.Text, long.Parse(BootFileSize.Text.Trim()) * 1024 ))
                 {
                     CommonUsages.MyMsgBox(" boot文件夹下bin文件拼接失败", CommonUsages.MsgBoxTypeEnum.Error);
                     return;
@@ -226,9 +226,9 @@ namespace CombineBinFilesTool
                 // bw.BaseStream.Length
                 while (fs.Length < length)
                 {
-                    bw.Write(0xFFFFFFFF);
+                   // bw.Write((UInt16)0xffff);
 
-
+                    bw.Write((Byte)0xff);
                 }
 
             }//end using
@@ -268,7 +268,8 @@ namespace CombineBinFilesTool
                     // bw.BaseStream.Length
                     while (fs.Length < dataLength)
                     {
-                        bw.Write(0xFFFFFFFF);
+                        bw.Write((uint)0xFFFFFFFF);
+                        //bw.Write();
                     }
 
                 }//end using
