@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 
@@ -14,9 +15,9 @@ namespace CombineBinFilesTool
     {
 
         //TextBox的默认值
-        private const String Boot_DEFAULT_TEXT = "128";
-        private const String App_DEFAULT_TEXT = "512";
-        private const String CRC_DEFAULT_TEXT = "40";
+        //private const String Boot_DEFAULT_TEXT = "128";
+        //private const String App_DEFAULT_TEXT = "512";
+        //private const String CRC_DEFAULT_TEXT = "40";
         private  string CrcFileFold = "";
         private string BootFileTemp = "";
         private string AppFileTemp = "";
@@ -25,9 +26,21 @@ namespace CombineBinFilesTool
             InitializeComponent();
             CommonUsages.Init();
 
-            SetDefaultText(BootFileSize, Boot_DEFAULT_TEXT);
-            SetDefaultText(AppFileSize, App_DEFAULT_TEXT);
-            SetDefaultText(CRCSize, CRC_DEFAULT_TEXT);
+            //从配置文件中读取默认值（即上次保存的值）
+            SetDefaultText(BootFileSize, CommonUsages.DefaultBootBinFileSize);
+            SetDefaultText(AppFileSize, CommonUsages.DefaultAppBinFileSize);
+            SetDefaultText(CRCSize, CommonUsages.DefaultCrcFileSize);
+            if (CommonUsages.DefaultCrcCheckSize.Trim().Equals("200"))
+            {
+                CRC200.Checked = true;
+            }
+            else
+            { 
+                CRC512.Checked = true;
+            }
+            string Version ="v" + Assembly.GetExecutingAssembly().GetName().Version.ToString().Substring(0,3);
+            this.Text = "bin文件合并" + Version;
+
         }
 
 
@@ -328,52 +341,53 @@ namespace CombineBinFilesTool
         }
 
         #region 事件触发
-        private void BootFileSize_Enter(object sender, EventArgs e)
-        {
-            if (BootFileSize.Text == Boot_DEFAULT_TEXT)
-            {
-                BootFileSize.Text = "";
-                BootFileSize.ForeColor = Color.Black;
-            }
+        //private void BootFileSize_Enter(object sender, EventArgs e)
+        //{
 
-        }
+        //    if (BootFileSize.Text == Boot_DEFAULT_TEXT)
+        //    {
+        //        BootFileSize.Text = "";
+        //        BootFileSize.ForeColor = Color.Black;
+        //    }
 
-        private void BootFileSize_Leave(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(BootFileSize.Text))
-                SetDefaultText(BootFileSize, Boot_DEFAULT_TEXT);
-        }
+        //}
 
-        private void AppFileSize_Enter(object sender, EventArgs e)
-        {
-            if (AppFileSize.Text == App_DEFAULT_TEXT)
-            {
-                AppFileSize.Text = "";
-                AppFileSize.ForeColor = Color.Black;
-            }
-        }
+        //private void BootFileSize_Leave(object sender, EventArgs e)
+        //{
+        //    if (String.IsNullOrEmpty(BootFileSize.Text))
+        //        SetDefaultText(BootFileSize, Boot_DEFAULT_TEXT);
+        //}
 
-        private void AppFileSize_Leave(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(AppFileSize.Text))
-                SetDefaultText(AppFileSize, App_DEFAULT_TEXT);
-        }
+        //private void AppFileSize_Enter(object sender, EventArgs e)
+        //{
+        //    if (AppFileSize.Text == App_DEFAULT_TEXT)
+        //    {
+        //        AppFileSize.Text = "";
+        //        AppFileSize.ForeColor = Color.Black;
+        //    }
+        //}
 
-        private void CRCSize_Enter(object sender, EventArgs e)
-        {
-            if (CRCSize.Text == CRC_DEFAULT_TEXT)
-            {
-                CRCSize.Text = "";
-                CRCSize.ForeColor = Color.Black;
-            }
-        }
+        //private void AppFileSize_Leave(object sender, EventArgs e)
+        //{
+        //    if (String.IsNullOrEmpty(AppFileSize.Text))
+        //        SetDefaultText(AppFileSize, App_DEFAULT_TEXT);
+        //}
 
-        private void CRCSize_Leave(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(CRCSize.Text))
-                SetDefaultText(CRCSize, CRC_DEFAULT_TEXT);
-        }
-        #endregion
+        //private void CRCSize_Enter(object sender, EventArgs e)
+        //{
+        //    if (CRCSize.Text == CRC_DEFAULT_TEXT)
+        //    {
+        //        CRCSize.Text = "";
+        //        CRCSize.ForeColor = Color.Black;
+        //    }
+        //}
+
+        //private void CRCSize_Leave(object sender, EventArgs e)
+        //{
+        //    if (String.IsNullOrEmpty(CRCSize.Text))
+        //        SetDefaultText(CRCSize, CRC_DEFAULT_TEXT);
+        //}
+       
 
         private void Form1_Activated(object sender, EventArgs e)
         {
@@ -386,5 +400,24 @@ namespace CombineBinFilesTool
             labelhide.Select();  //label1的visible属性设为false
 
         }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            CommonUsages.UpdateXml(CommonUsages.ConfigFolder, "defaultFolder", CommonUsages.DefaultFolder);
+            CommonUsages.UpdateXml(CommonUsages.ConfigFolder, "defaultBootBinFileSize", BootFileSize.Text.Trim());
+            CommonUsages.UpdateXml(CommonUsages.ConfigFolder, "defaultAppBinFileSize", AppFileSize.Text.Trim());
+            CommonUsages.UpdateXml(CommonUsages.ConfigFolder, "defaultCrcFileSize", CRCSize.Text.Trim());
+
+            if (CRC200.Checked)
+            {
+                CommonUsages.UpdateXml(CommonUsages.ConfigFolder, "defaultCrcCheckSize", "200");
+            }
+            else
+            {
+                CommonUsages.UpdateXml(CommonUsages.ConfigFolder, "defaultCrcCheckSize", "512");
+            }
+           
+        }
+        #endregion
     }
 }

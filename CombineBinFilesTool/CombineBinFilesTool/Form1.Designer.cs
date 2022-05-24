@@ -88,8 +88,8 @@
             this.BootFileSize.Name = "BootFileSize";
             this.BootFileSize.Size = new System.Drawing.Size(100, 21);
             this.BootFileSize.TabIndex = 5;
-            this.BootFileSize.Enter += new System.EventHandler(this.BootFileSize_Enter);
-            this.BootFileSize.Leave += new System.EventHandler(this.BootFileSize_Leave);
+            //.BootFileSize.Enter += new System.EventHandler(this.BootFileSize_Enter);
+            //this.BootFileSize.Leave += new System.EventHandler(this.BootFileSize_Leave);
             // 
             // AppFileSize
             // 
@@ -97,8 +97,8 @@
             this.AppFileSize.Name = "AppFileSize";
             this.AppFileSize.Size = new System.Drawing.Size(100, 21);
             this.AppFileSize.TabIndex = 6;
-            this.AppFileSize.Enter += new System.EventHandler(this.AppFileSize_Enter);
-            this.AppFileSize.Leave += new System.EventHandler(this.AppFileSize_Leave);
+            //this.AppFileSize.Enter += new System.EventHandler(this.AppFileSize_Enter);
+            //this.AppFileSize.Leave += new System.EventHandler(this.AppFileSize_Leave);
             // 
             // CRCSize
             // 
@@ -106,8 +106,8 @@
             this.CRCSize.Name = "CRCSize";
             this.CRCSize.Size = new System.Drawing.Size(100, 21);
             this.CRCSize.TabIndex = 7;
-            this.CRCSize.Enter += new System.EventHandler(this.CRCSize_Enter);
-            this.CRCSize.Leave += new System.EventHandler(this.CRCSize_Leave);
+            //this.CRCSize.Enter += new System.EventHandler(this.CRCSize_Enter);
+            //this.CRCSize.Leave += new System.EventHandler(this.CRCSize_Leave);
             // 
             // label4
             // 
@@ -282,6 +282,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bin文件合并";
             this.Activated += new System.EventHandler(this.Form1_Activated);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
             this.groupBox1.ResumeLayout(false);

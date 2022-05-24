@@ -1,4 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <defaultFolder>C:</defaultFolder>
+  <defaultBootBinFileSize>128</defaultBootBinFileSize>
+  <defaultAppBinFileSize>512</defaultAppBinFileSize>
+  <defaultCrcCheckSize>200</defaultCrcCheckSize>
+  <defaultCrcFileSize>40</defaultCrcFileSize>
 </root>
