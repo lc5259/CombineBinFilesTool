@@ -118,7 +118,7 @@ namespace CombineBinFilesTool
                 }
 
                 //CRC校验,只校验app地下的，还是扩展拼接后的
-                string CrcFileTemp = Path.GetDirectoryName(tBAppFolder.Text) + @"\" + Path.GetFileNameWithoutExtension(tBAppFolder.Text) + "_temp.bin";
+                string CrcFileTemp = Path.GetDirectoryName(tBAppFolder.Text) + @"\target"+ @"\" + Path.GetFileNameWithoutExtension(tBAppFolder.Text) + "_temp.bin";
                 if (!CommonUsages.CheckCrc16(CrcFileTemp, Length))
                 {
                     CommonUsages.MyMsgBox(" app文件夹下bin文件crc校验失败", CommonUsages.MsgBoxTypeEnum.Error);
@@ -201,8 +201,9 @@ namespace CombineBinFilesTool
 
         private bool FillFile(string fileName, long length)
         {
-            
-            string FileTemp = Path.GetDirectoryName(fileName) + @"\" + Path.GetFileNameWithoutExtension(fileName) + "_temp.bin";
+            //创建target目录
+            Directory.CreateDirectory(Path.GetDirectoryName(fileName) + @"\target");
+            string FileTemp = Path.GetDirectoryName(fileName) + @"\target"+ @"\" + Path.GetFileNameWithoutExtension(fileName) + "_temp.bin";
             
             if (!File.Exists(FileTemp))
             {
@@ -258,7 +259,7 @@ namespace CombineBinFilesTool
         {
             try
             {
-                string FileTemp = Directory + @"\" + "crc.bin";
+                string FileTemp = Directory + @"\target"+ @"\" + "crc.bin";
 
                 using (FileStream fs = new FileStream(FileTemp, FileMode.Create, FileAccess.Write))
                 {
@@ -302,10 +303,10 @@ namespace CombineBinFilesTool
             try
             {
                 
-                string fileBootFolder = Path.GetDirectoryName(tBBootFolder.Text) + @"\" + Path.GetFileNameWithoutExtension(tBBootFolder.Text) + "_temp.bin"; 
-                string fileApp = Path.GetDirectoryName(tBAppFolder.Text) + @"\" + Path.GetFileNameWithoutExtension(tBAppFolder.Text) + "_temp.bin"; 
+                string fileBootFolder = Path.GetDirectoryName(tBBootFolder.Text) + @"\target"+ @"\" + Path.GetFileNameWithoutExtension(tBBootFolder.Text) + "_temp.bin"; 
+                string fileApp = Path.GetDirectoryName(tBAppFolder.Text) + @"\target"+ @"\" + Path.GetFileNameWithoutExtension(tBAppFolder.Text) + "_temp.bin"; 
                 string fileCrc = CrcFileFold;
-                string targetpath = Path.GetDirectoryName(tBAppFolder.Text) + @"\" + "boot_app_crc.bin";
+                string targetpath = Path.GetDirectoryName(tBAppFolder.Text) + @"\target"+ @"\" + "boot_app_crc.bin";
                 
                 FileStream fsr1 = new FileStream(fileBootFolder, FileMode.Open, FileAccess.Read);
                 FileStream fsr2 = new FileStream(fileApp, FileMode.Open, FileAccess.Read);
