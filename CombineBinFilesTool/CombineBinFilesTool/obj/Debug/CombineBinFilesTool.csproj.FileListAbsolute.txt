@@ -9,7 +9,6 @@ C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\obj\Debug\Co
 C:\work\CombineBinFilesTool\combine-bin-files-tool\CombineBinFilesTool\CombineBinFilesTool\bin\Debug\CombineBinFilesTool.exe
 C:\work\CombineBinFilesTool\combine-bin-files-tool\CombineBinFilesTool\CombineBinFilesTool\bin\Debug\CombineBinFilesTool.pdb
 C:\work\CombineBinFilesTool\combine-bin-files-tool\CombineBinFilesTool\CombineBinFilesTool\obj\Debug\CombineBinFilesTool.csproj.AssemblyReference.cache
-C:\work\CombineBinFilesTool\combine-bin-files-tool\CombineBinFilesTool\CombineBinFilesTool\obj\Debug\CombineBinFilesTool.Form1.resources
 C:\work\CombineBinFilesTool\combine-bin-files-tool\CombineBinFilesTool\CombineBinFilesTool\obj\Debug\CombineBinFilesTool.Properties.Resources.resources
 C:\work\CombineBinFilesTool\combine-bin-files-tool\CombineBinFilesTool\CombineBinFilesTool\obj\Debug\CombineBinFilesTool.csproj.GenerateResource.cache
 C:\work\CombineBinFilesTool\combine-bin-files-tool\CombineBinFilesTool\CombineBinFilesTool\obj\Debug\CombineBinFilesTool.csproj.CoreCompileInputs.cache
@@ -20,3 +19,4 @@ C:\work\CombineBinFilesTool\combine-bin-files-tool\CombineBinFilesTool\CombineBi
 C:\work\CombineBinFilesTool\combine-bin-files-tool\CombineBinFilesTool\CombineBinFilesTool\bin\Debug\HslCommunication.xml
 C:\work\CombineBinFilesTool\combine-bin-files-tool\CombineBinFilesTool\CombineBinFilesTool\bin\Debug\Newtonsoft.Json.xml
 C:\work\CombineBinFilesTool\combine-bin-files-tool\CombineBinFilesTool\CombineBinFilesTool\obj\Debug\CombineBinFilesTool.csproj.CopyComplete
+C:\work\CombineBinFilesTool\combine-bin-files-tool\CombineBinFilesTool\CombineBinFilesTool\obj\Debug\CombineBinFilesTool.FormMain.resources
