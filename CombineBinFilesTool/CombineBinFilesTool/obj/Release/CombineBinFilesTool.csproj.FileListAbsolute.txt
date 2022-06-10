@@ -1,0 +1,14 @@
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\bin\Release\CombineBinFilesTool.exe
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\bin\Release\CombineBinFilesTool.pdb
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\bin\Release\HslCommunication.dll
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\bin\Release\Newtonsoft.Json.dll
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\bin\Release\HslCommunication.xml
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\bin\Release\Newtonsoft.Json.xml
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\obj\Release\CombineBinFilesTool.csproj.AssemblyReference.cache
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\obj\Release\CombineBinFilesTool.FormMain.resources
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\obj\Release\CombineBinFilesTool.Properties.Resources.resources
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\obj\Release\CombineBinFilesTool.csproj.GenerateResource.cache
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\obj\Release\CombineBinFilesTool.csproj.CoreCompileInputs.cache
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\obj\Release\CombineBinFilesTool.csproj.CopyComplete
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\obj\Release\CombineBinFilesTool.exe
+C:\work\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\CombineBinFilesTool\obj\Release\CombineBinFilesTool.pdb
